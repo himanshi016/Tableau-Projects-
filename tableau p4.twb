@@ -1,0 +1,2006 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20242.24.0910.0334                               -->
+<workbook original-version='18.1' source-build='2024.2.3 (20242.24.0910.0334)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <SpatialFileLayer />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='London_Borough_Excluding_MHW' inline='true' name='federated.11jqx2d0hk6sft18us2ok1tft3fm' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='London_Borough_Excluding_MHW' name='ogrdirect.19e81141lp5pos1a2dbtb1u229qz'>
+            <connection class='ogrdirect' directory='C:/Users/HP/Downloads/Section+3-5+-+London+Borough+Dataset+-+Spatial+Files/Section 3-5 - London Borough Dataset - Spatial Files/CO2 Emissions by London Borough/London Boroughs Spatial File' filename='London_Borough_Excluding_MHW.shp' password='' server='' tablename='' />
+          </named-connection>
+          <named-connection caption='carbon-emissions-borough' name='excel-direct.0xxx1fa1kfz3vj1fnqx0j10a06so'>
+            <connection class='excel-direct' cleaning='yes' compat='no' dataRefreshTime='' filename='C:/Users/HP/Downloads/Section+3-5+-+London+Borough+Dataset+-+Spatial+Files/Section 3-5 - London Borough Dataset - Spatial Files/CO2 Emissions by London Borough/carbon-emissions-borough.xls' interpretationMode='1' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[London_Borough_Excluding_MHW.shp].[GSS_CODE]' />
+              <expression op='[TOTAL].[Code]' />
+            </expression>
+          </clause>
+          <relation connection='ogrdirect.19e81141lp5pos1a2dbtb1u229qz' name='London_Borough_Excluding_MHW.shp' table='[London_Borough_Excluding_MHW.shp]' type='table'>
+            <columns>
+              <column datatype='string' name='NAME' ordinal='0' />
+              <column datatype='string' name='GSS_CODE' ordinal='1' />
+              <column datatype='real' name='HECTARES' ordinal='2' />
+              <column datatype='real' name='NONLD_AREA' ordinal='3' />
+              <column datatype='string' name='ONS_INNER' ordinal='4' />
+              <column datatype='string' name='SUB_2009' ordinal='5' />
+              <column datatype='string' name='SUB_2006' ordinal='6' />
+              <column datatype='spatial' name='Geometry' ordinal='7' />
+            </columns>
+          </relation>
+          <relation name='Pivot' type='pivot'>
+            <columns>
+              <column datatype='string' name='Pivot Field Names' />
+              <column datatype='real' name='Pivot Field Values' />
+            </columns>
+            <tag name='Pivot Field Names'>
+              <value name='[Grand Total 2005]' />
+              <value name='[Grand Total 2006]' />
+              <value name='[Grand Total 2007]' />
+              <value name='[Grand Total 2008]' />
+              <value name='[Grand Total 2009]' />
+              <value name='[Grand Total 2010]' />
+              <value name='[Grand Total 2011]' />
+              <value name='[Grand Total 2012]' />
+              <value name='[Grand Total 2013]' />
+              <value name='[Grand Total 2014]' />
+              <value name='[N. LULUCF Net Emissions 2005]' />
+              <value name='[N. LULUCF Net Emissions 2006]' />
+              <value name='[N. LULUCF Net Emissions 2007]' />
+              <value name='[N. LULUCF Net Emissions 2008]' />
+              <value name='[N. LULUCF Net Emissions 2009]' />
+              <value name='[N. LULUCF Net Emissions 2010]' />
+              <value name='[N. LULUCF Net Emissions 2011]' />
+              <value name='[N. LULUCF Net Emissions 2012]' />
+              <value name='[N. LULUCF Net Emissions 2013]' />
+              <value name='[N. LULUCF Net Emissions 2014]' />
+              <value name='[Per Capita Emissions (t) 2005]' />
+              <value name='[Per Capita Emissions (t) 2006]' />
+              <value name='[Per Capita Emissions (t) 2007]' />
+              <value name='[Per Capita Emissions (t) 2008]' />
+              <value name='[Per Capita Emissions (t) 2009]' />
+              <value name='[Per Capita Emissions (t) 2010]' />
+              <value name='[Per Capita Emissions (t) 2011]' />
+              <value name='[Per Capita Emissions (t) 2012]' />
+              <value name='[Per Capita Emissions (t) 2013]' />
+              <value name='[Per Capita Emissions (t) 2014]' />
+              <value name='[Population (&apos;000s, mid-year estimate) 2005]' />
+              <value name='[Population (&apos;000s, mid-year estimate) 2006]' />
+              <value name='[Population (&apos;000s, mid-year estimate) 2007]' />
+              <value name='[Population (&apos;000s, mid-year estimate) 2008]' />
+              <value name='[Population (&apos;000s, mid-year estimate) 2009]' />
+              <value name='[Population (&apos;000s, mid-year estimate) 2010]' />
+              <value name='[Population (&apos;000s, mid-year estimate) 2011]' />
+              <value name='[Population (&apos;000s, mid-year estimate) 2012]' />
+              <value name='[Population (&apos;000s, mid-year estimate) 2013]' />
+              <value name='[Population (&apos;000s, mid-year estimate) 2014]' />
+              <value name='[Transport 2013]' />
+              <value name='[Transport 2014]' />
+            </tag>
+            <groups>
+              <group name='Pivot Field Values'>
+                <field name='[TOTAL].[Grand Total 2005]' />
+                <field name='[TOTAL].[Grand Total 2006]' />
+                <field name='[TOTAL].[Grand Total 2007]' />
+                <field name='[TOTAL].[Grand Total 2008]' />
+                <field name='[TOTAL].[Grand Total 2009]' />
+                <field name='[TOTAL].[Grand Total 2010]' />
+                <field name='[TOTAL].[Grand Total 2011]' />
+                <field name='[TOTAL].[Grand Total 2012]' />
+                <field name='[TOTAL].[Grand Total 2013]' />
+                <field name='[TOTAL].[Grand Total 2014]' />
+                <field name='[TOTAL].[N. LULUCF Net Emissions 2005]' />
+                <field name='[TOTAL].[N. LULUCF Net Emissions 2006]' />
+                <field name='[TOTAL].[N. LULUCF Net Emissions 2007]' />
+                <field name='[TOTAL].[N. LULUCF Net Emissions 2008]' />
+                <field name='[TOTAL].[N. LULUCF Net Emissions 2009]' />
+                <field name='[TOTAL].[N. LULUCF Net Emissions 2010]' />
+                <field name='[TOTAL].[N. LULUCF Net Emissions 2011]' />
+                <field name='[TOTAL].[N. LULUCF Net Emissions 2012]' />
+                <field name='[TOTAL].[N. LULUCF Net Emissions 2013]' />
+                <field name='[TOTAL].[N. LULUCF Net Emissions 2014]' />
+                <field name='[TOTAL].[Per Capita Emissions (t) 2005]' />
+                <field name='[TOTAL].[Per Capita Emissions (t) 2006]' />
+                <field name='[TOTAL].[Per Capita Emissions (t) 2007]' />
+                <field name='[TOTAL].[Per Capita Emissions (t) 2008]' />
+                <field name='[TOTAL].[Per Capita Emissions (t) 2009]' />
+                <field name='[TOTAL].[Per Capita Emissions (t) 2010]' />
+                <field name='[TOTAL].[Per Capita Emissions (t) 2011]' />
+                <field name='[TOTAL].[Per Capita Emissions (t) 2012]' />
+                <field name='[TOTAL].[Per Capita Emissions (t) 2013]' />
+                <field name='[TOTAL].[Per Capita Emissions (t) 2014]' />
+                <field name='[TOTAL].[Population (&apos;000s, mid-year estimate) 2005]' />
+                <field name='[TOTAL].[Population (&apos;000s, mid-year estimate) 2006]' />
+                <field name='[TOTAL].[Population (&apos;000s, mid-year estimate) 2007]' />
+                <field name='[TOTAL].[Population (&apos;000s, mid-year estimate) 2008]' />
+                <field name='[TOTAL].[Population (&apos;000s, mid-year estimate) 2009]' />
+                <field name='[TOTAL].[Population (&apos;000s, mid-year estimate) 2010]' />
+                <field name='[TOTAL].[Population (&apos;000s, mid-year estimate) 2011]' />
+                <field name='[TOTAL].[Population (&apos;000s, mid-year estimate) 2012]' />
+                <field name='[TOTAL].[Population (&apos;000s, mid-year estimate) 2013]' />
+                <field name='[TOTAL].[Population (&apos;000s, mid-year estimate) 2014]' />
+                <field name='[TOTAL].[Transport 2013]' />
+                <field name='[TOTAL].[Transport 2014]' />
+              </group>
+            </groups>
+            <relation connection='excel-direct.0xxx1fa1kfz3vj1fnqx0j10a06so' name='TOTAL' table='[TOTAL$]' type='table'>
+              <columns gridOrigin='A1:BT54:no:A1:BT54:2' lost='0' outcome='1' processed='3333'>
+                <column datatype='string' name='Code' ordinal='0' />
+                <column datatype='string' name='Name' ordinal='1' />
+                <column datatype='real' name='Industry and Commercial 2005' ordinal='2' />
+                <column datatype='real' name='Industry and Commercial 2006' ordinal='3' />
+                <column datatype='real' name='Industry and Commercial 2007' ordinal='4' />
+                <column datatype='real' name='Industry and Commercial 2008' ordinal='5' />
+                <column datatype='real' name='Industry and Commercial 2009' ordinal='6' />
+                <column datatype='real' name='Industry and Commercial 2010' ordinal='7' />
+                <column datatype='real' name='Industry and Commercial 2011' ordinal='8' />
+                <column datatype='real' name='Industry and Commercial 2012' ordinal='9' />
+                <column datatype='real' name='Industry and Commercial 2013' ordinal='10' />
+                <column datatype='real' name='Industry and Commercial 2014' ordinal='11' />
+                <column datatype='real' name='Domestic 2005' ordinal='12' />
+                <column datatype='real' name='Domestic 2006' ordinal='13' />
+                <column datatype='real' name='Domestic 2007' ordinal='14' />
+                <column datatype='real' name='Domestic 2008' ordinal='15' />
+                <column datatype='real' name='Domestic 2009' ordinal='16' />
+                <column datatype='real' name='Domestic 2010' ordinal='17' />
+                <column datatype='real' name='Domestic 2011' ordinal='18' />
+                <column datatype='real' name='Domestic 2012' ordinal='19' />
+                <column datatype='real' name='Domestic 2013' ordinal='20' />
+                <column datatype='real' name='Domestic 2014' ordinal='21' />
+                <column datatype='real' name='Transport 2005' ordinal='22' />
+                <column datatype='real' name='Transport 2006' ordinal='23' />
+                <column datatype='real' name='Transport 2007' ordinal='24' />
+                <column datatype='real' name='Transport 2008' ordinal='25' />
+                <column datatype='real' name='Transport 2009' ordinal='26' />
+                <column datatype='real' name='Transport 2010' ordinal='27' />
+                <column datatype='real' name='Transport 2011' ordinal='28' />
+                <column datatype='real' name='Transport 2012' ordinal='29' />
+                <column datatype='real' name='Transport 2013' ordinal='30' />
+                <column datatype='real' name='Transport 2014' ordinal='31' />
+                <column datatype='real' name='N. LULUCF Net Emissions 2005' ordinal='32' />
+                <column datatype='real' name='N. LULUCF Net Emissions 2006' ordinal='33' />
+                <column datatype='real' name='N. LULUCF Net Emissions 2007' ordinal='34' />
+                <column datatype='real' name='N. LULUCF Net Emissions 2008' ordinal='35' />
+                <column datatype='real' name='N. LULUCF Net Emissions 2009' ordinal='36' />
+                <column datatype='real' name='N. LULUCF Net Emissions 2010' ordinal='37' />
+                <column datatype='real' name='N. LULUCF Net Emissions 2011' ordinal='38' />
+                <column datatype='real' name='N. LULUCF Net Emissions 2012' ordinal='39' />
+                <column datatype='real' name='N. LULUCF Net Emissions 2013' ordinal='40' />
+                <column datatype='real' name='N. LULUCF Net Emissions 2014' ordinal='41' />
+                <column datatype='real' name='Grand Total 2005' ordinal='42' />
+                <column datatype='real' name='Grand Total 2006' ordinal='43' />
+                <column datatype='real' name='Grand Total 2007' ordinal='44' />
+                <column datatype='real' name='Grand Total 2008' ordinal='45' />
+                <column datatype='real' name='Grand Total 2009' ordinal='46' />
+                <column datatype='real' name='Grand Total 2010' ordinal='47' />
+                <column datatype='real' name='Grand Total 2011' ordinal='48' />
+                <column datatype='real' name='Grand Total 2012' ordinal='49' />
+                <column datatype='real' name='Grand Total 2013' ordinal='50' />
+                <column datatype='real' name='Grand Total 2014' ordinal='51' />
+                <column datatype='real' name='Population (&apos;000s, mid-year estimate) 2005' ordinal='52' />
+                <column datatype='real' name='Population (&apos;000s, mid-year estimate) 2006' ordinal='53' />
+                <column datatype='real' name='Population (&apos;000s, mid-year estimate) 2007' ordinal='54' />
+                <column datatype='real' name='Population (&apos;000s, mid-year estimate) 2008' ordinal='55' />
+                <column datatype='real' name='Population (&apos;000s, mid-year estimate) 2009' ordinal='56' />
+                <column datatype='real' name='Population (&apos;000s, mid-year estimate) 2010' ordinal='57' />
+                <column datatype='real' name='Population (&apos;000s, mid-year estimate) 2011' ordinal='58' />
+                <column datatype='real' name='Population (&apos;000s, mid-year estimate) 2012' ordinal='59' />
+                <column datatype='real' name='Population (&apos;000s, mid-year estimate) 2013' ordinal='60' />
+                <column datatype='real' name='Population (&apos;000s, mid-year estimate) 2014' ordinal='61' />
+                <column datatype='real' name='Per Capita Emissions (t) 2005' ordinal='62' />
+                <column datatype='real' name='Per Capita Emissions (t) 2006' ordinal='63' />
+                <column datatype='real' name='Per Capita Emissions (t) 2007' ordinal='64' />
+                <column datatype='real' name='Per Capita Emissions (t) 2008' ordinal='65' />
+                <column datatype='real' name='Per Capita Emissions (t) 2009' ordinal='66' />
+                <column datatype='real' name='Per Capita Emissions (t) 2010' ordinal='67' />
+                <column datatype='real' name='Per Capita Emissions (t) 2011' ordinal='68' />
+                <column datatype='real' name='Per Capita Emissions (t) 2012' ordinal='69' />
+                <column datatype='real' name='Per Capita Emissions (t) 2013' ordinal='70' />
+                <column datatype='real' name='Per Capita Emissions (t) 2014' ordinal='71' />
+              </columns>
+            </relation>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[London_Borough_Excluding_MHW.shp].[GSS_CODE]' />
+              <expression op='[TOTAL].[Code]' />
+            </expression>
+          </clause>
+          <relation connection='ogrdirect.19e81141lp5pos1a2dbtb1u229qz' name='London_Borough_Excluding_MHW.shp' table='[London_Borough_Excluding_MHW.shp]' type='table'>
+            <columns>
+              <column datatype='string' name='NAME' ordinal='0' />
+              <column datatype='string' name='GSS_CODE' ordinal='1' />
+              <column datatype='real' name='HECTARES' ordinal='2' />
+              <column datatype='real' name='NONLD_AREA' ordinal='3' />
+              <column datatype='string' name='ONS_INNER' ordinal='4' />
+              <column datatype='string' name='SUB_2009' ordinal='5' />
+              <column datatype='string' name='SUB_2006' ordinal='6' />
+              <column datatype='spatial' name='Geometry' ordinal='7' />
+            </columns>
+          </relation>
+          <relation name='Pivot' type='pivot'>
+            <columns>
+              <column datatype='string' name='Pivot Field Names' />
+              <column datatype='real' name='Pivot Field Values' />
+            </columns>
+            <tag name='Pivot Field Names'>
+              <value name='[Grand Total 2005]' />
+              <value name='[Grand Total 2006]' />
+              <value name='[Grand Total 2007]' />
+              <value name='[Grand Total 2008]' />
+              <value name='[Grand Total 2009]' />
+              <value name='[Grand Total 2010]' />
+              <value name='[Grand Total 2011]' />
+              <value name='[Grand Total 2012]' />
+              <value name='[Grand Total 2013]' />
+              <value name='[Grand Total 2014]' />
+              <value name='[N. LULUCF Net Emissions 2005]' />
+              <value name='[N. LULUCF Net Emissions 2006]' />
+              <value name='[N. LULUCF Net Emissions 2007]' />
+              <value name='[N. LULUCF Net Emissions 2008]' />
+              <value name='[N. LULUCF Net Emissions 2009]' />
+              <value name='[N. LULUCF Net Emissions 2010]' />
+              <value name='[N. LULUCF Net Emissions 2011]' />
+              <value name='[N. LULUCF Net Emissions 2012]' />
+              <value name='[N. LULUCF Net Emissions 2013]' />
+              <value name='[N. LULUCF Net Emissions 2014]' />
+              <value name='[Per Capita Emissions (t) 2005]' />
+              <value name='[Per Capita Emissions (t) 2006]' />
+              <value name='[Per Capita Emissions (t) 2007]' />
+              <value name='[Per Capita Emissions (t) 2008]' />
+              <value name='[Per Capita Emissions (t) 2009]' />
+              <value name='[Per Capita Emissions (t) 2010]' />
+              <value name='[Per Capita Emissions (t) 2011]' />
+              <value name='[Per Capita Emissions (t) 2012]' />
+              <value name='[Per Capita Emissions (t) 2013]' />
+              <value name='[Per Capita Emissions (t) 2014]' />
+              <value name='[Population (&apos;000s, mid-year estimate) 2005]' />
+              <value name='[Population (&apos;000s, mid-year estimate) 2006]' />
+              <value name='[Population (&apos;000s, mid-year estimate) 2007]' />
+              <value name='[Population (&apos;000s, mid-year estimate) 2008]' />
+              <value name='[Population (&apos;000s, mid-year estimate) 2009]' />
+              <value name='[Population (&apos;000s, mid-year estimate) 2010]' />
+              <value name='[Population (&apos;000s, mid-year estimate) 2011]' />
+              <value name='[Population (&apos;000s, mid-year estimate) 2012]' />
+              <value name='[Population (&apos;000s, mid-year estimate) 2013]' />
+              <value name='[Population (&apos;000s, mid-year estimate) 2014]' />
+              <value name='[Transport 2013]' />
+              <value name='[Transport 2014]' />
+            </tag>
+            <groups>
+              <group name='Pivot Field Values'>
+                <field name='[TOTAL].[Grand Total 2005]' />
+                <field name='[TOTAL].[Grand Total 2006]' />
+                <field name='[TOTAL].[Grand Total 2007]' />
+                <field name='[TOTAL].[Grand Total 2008]' />
+                <field name='[TOTAL].[Grand Total 2009]' />
+                <field name='[TOTAL].[Grand Total 2010]' />
+                <field name='[TOTAL].[Grand Total 2011]' />
+                <field name='[TOTAL].[Grand Total 2012]' />
+                <field name='[TOTAL].[Grand Total 2013]' />
+                <field name='[TOTAL].[Grand Total 2014]' />
+                <field name='[TOTAL].[N. LULUCF Net Emissions 2005]' />
+                <field name='[TOTAL].[N. LULUCF Net Emissions 2006]' />
+                <field name='[TOTAL].[N. LULUCF Net Emissions 2007]' />
+                <field name='[TOTAL].[N. LULUCF Net Emissions 2008]' />
+                <field name='[TOTAL].[N. LULUCF Net Emissions 2009]' />
+                <field name='[TOTAL].[N. LULUCF Net Emissions 2010]' />
+                <field name='[TOTAL].[N. LULUCF Net Emissions 2011]' />
+                <field name='[TOTAL].[N. LULUCF Net Emissions 2012]' />
+                <field name='[TOTAL].[N. LULUCF Net Emissions 2013]' />
+                <field name='[TOTAL].[N. LULUCF Net Emissions 2014]' />
+                <field name='[TOTAL].[Per Capita Emissions (t) 2005]' />
+                <field name='[TOTAL].[Per Capita Emissions (t) 2006]' />
+                <field name='[TOTAL].[Per Capita Emissions (t) 2007]' />
+                <field name='[TOTAL].[Per Capita Emissions (t) 2008]' />
+                <field name='[TOTAL].[Per Capita Emissions (t) 2009]' />
+                <field name='[TOTAL].[Per Capita Emissions (t) 2010]' />
+                <field name='[TOTAL].[Per Capita Emissions (t) 2011]' />
+                <field name='[TOTAL].[Per Capita Emissions (t) 2012]' />
+                <field name='[TOTAL].[Per Capita Emissions (t) 2013]' />
+                <field name='[TOTAL].[Per Capita Emissions (t) 2014]' />
+                <field name='[TOTAL].[Population (&apos;000s, mid-year estimate) 2005]' />
+                <field name='[TOTAL].[Population (&apos;000s, mid-year estimate) 2006]' />
+                <field name='[TOTAL].[Population (&apos;000s, mid-year estimate) 2007]' />
+                <field name='[TOTAL].[Population (&apos;000s, mid-year estimate) 2008]' />
+                <field name='[TOTAL].[Population (&apos;000s, mid-year estimate) 2009]' />
+                <field name='[TOTAL].[Population (&apos;000s, mid-year estimate) 2010]' />
+                <field name='[TOTAL].[Population (&apos;000s, mid-year estimate) 2011]' />
+                <field name='[TOTAL].[Population (&apos;000s, mid-year estimate) 2012]' />
+                <field name='[TOTAL].[Population (&apos;000s, mid-year estimate) 2013]' />
+                <field name='[TOTAL].[Population (&apos;000s, mid-year estimate) 2014]' />
+                <field name='[TOTAL].[Transport 2013]' />
+                <field name='[TOTAL].[Transport 2014]' />
+              </group>
+            </groups>
+            <relation connection='excel-direct.0xxx1fa1kfz3vj1fnqx0j10a06so' name='TOTAL' table='[TOTAL$]' type='table'>
+              <columns gridOrigin='A1:BT54:no:A1:BT54:2' lost='0' outcome='1' processed='3333'>
+                <column datatype='string' name='Code' ordinal='0' />
+                <column datatype='string' name='Name' ordinal='1' />
+                <column datatype='real' name='Industry and Commercial 2005' ordinal='2' />
+                <column datatype='real' name='Industry and Commercial 2006' ordinal='3' />
+                <column datatype='real' name='Industry and Commercial 2007' ordinal='4' />
+                <column datatype='real' name='Industry and Commercial 2008' ordinal='5' />
+                <column datatype='real' name='Industry and Commercial 2009' ordinal='6' />
+                <column datatype='real' name='Industry and Commercial 2010' ordinal='7' />
+                <column datatype='real' name='Industry and Commercial 2011' ordinal='8' />
+                <column datatype='real' name='Industry and Commercial 2012' ordinal='9' />
+                <column datatype='real' name='Industry and Commercial 2013' ordinal='10' />
+                <column datatype='real' name='Industry and Commercial 2014' ordinal='11' />
+                <column datatype='real' name='Domestic 2005' ordinal='12' />
+                <column datatype='real' name='Domestic 2006' ordinal='13' />
+                <column datatype='real' name='Domestic 2007' ordinal='14' />
+                <column datatype='real' name='Domestic 2008' ordinal='15' />
+                <column datatype='real' name='Domestic 2009' ordinal='16' />
+                <column datatype='real' name='Domestic 2010' ordinal='17' />
+                <column datatype='real' name='Domestic 2011' ordinal='18' />
+                <column datatype='real' name='Domestic 2012' ordinal='19' />
+                <column datatype='real' name='Domestic 2013' ordinal='20' />
+                <column datatype='real' name='Domestic 2014' ordinal='21' />
+                <column datatype='real' name='Transport 2005' ordinal='22' />
+                <column datatype='real' name='Transport 2006' ordinal='23' />
+                <column datatype='real' name='Transport 2007' ordinal='24' />
+                <column datatype='real' name='Transport 2008' ordinal='25' />
+                <column datatype='real' name='Transport 2009' ordinal='26' />
+                <column datatype='real' name='Transport 2010' ordinal='27' />
+                <column datatype='real' name='Transport 2011' ordinal='28' />
+                <column datatype='real' name='Transport 2012' ordinal='29' />
+                <column datatype='real' name='Transport 2013' ordinal='30' />
+                <column datatype='real' name='Transport 2014' ordinal='31' />
+                <column datatype='real' name='N. LULUCF Net Emissions 2005' ordinal='32' />
+                <column datatype='real' name='N. LULUCF Net Emissions 2006' ordinal='33' />
+                <column datatype='real' name='N. LULUCF Net Emissions 2007' ordinal='34' />
+                <column datatype='real' name='N. LULUCF Net Emissions 2008' ordinal='35' />
+                <column datatype='real' name='N. LULUCF Net Emissions 2009' ordinal='36' />
+                <column datatype='real' name='N. LULUCF Net Emissions 2010' ordinal='37' />
+                <column datatype='real' name='N. LULUCF Net Emissions 2011' ordinal='38' />
+                <column datatype='real' name='N. LULUCF Net Emissions 2012' ordinal='39' />
+                <column datatype='real' name='N. LULUCF Net Emissions 2013' ordinal='40' />
+                <column datatype='real' name='N. LULUCF Net Emissions 2014' ordinal='41' />
+                <column datatype='real' name='Grand Total 2005' ordinal='42' />
+                <column datatype='real' name='Grand Total 2006' ordinal='43' />
+                <column datatype='real' name='Grand Total 2007' ordinal='44' />
+                <column datatype='real' name='Grand Total 2008' ordinal='45' />
+                <column datatype='real' name='Grand Total 2009' ordinal='46' />
+                <column datatype='real' name='Grand Total 2010' ordinal='47' />
+                <column datatype='real' name='Grand Total 2011' ordinal='48' />
+                <column datatype='real' name='Grand Total 2012' ordinal='49' />
+                <column datatype='real' name='Grand Total 2013' ordinal='50' />
+                <column datatype='real' name='Grand Total 2014' ordinal='51' />
+                <column datatype='real' name='Population (&apos;000s, mid-year estimate) 2005' ordinal='52' />
+                <column datatype='real' name='Population (&apos;000s, mid-year estimate) 2006' ordinal='53' />
+                <column datatype='real' name='Population (&apos;000s, mid-year estimate) 2007' ordinal='54' />
+                <column datatype='real' name='Population (&apos;000s, mid-year estimate) 2008' ordinal='55' />
+                <column datatype='real' name='Population (&apos;000s, mid-year estimate) 2009' ordinal='56' />
+                <column datatype='real' name='Population (&apos;000s, mid-year estimate) 2010' ordinal='57' />
+                <column datatype='real' name='Population (&apos;000s, mid-year estimate) 2011' ordinal='58' />
+                <column datatype='real' name='Population (&apos;000s, mid-year estimate) 2012' ordinal='59' />
+                <column datatype='real' name='Population (&apos;000s, mid-year estimate) 2013' ordinal='60' />
+                <column datatype='real' name='Population (&apos;000s, mid-year estimate) 2014' ordinal='61' />
+                <column datatype='real' name='Per Capita Emissions (t) 2005' ordinal='62' />
+                <column datatype='real' name='Per Capita Emissions (t) 2006' ordinal='63' />
+                <column datatype='real' name='Per Capita Emissions (t) 2007' ordinal='64' />
+                <column datatype='real' name='Per Capita Emissions (t) 2008' ordinal='65' />
+                <column datatype='real' name='Per Capita Emissions (t) 2009' ordinal='66' />
+                <column datatype='real' name='Per Capita Emissions (t) 2010' ordinal='67' />
+                <column datatype='real' name='Per Capita Emissions (t) 2011' ordinal='68' />
+                <column datatype='real' name='Per Capita Emissions (t) 2012' ordinal='69' />
+                <column datatype='real' name='Per Capita Emissions (t) 2013' ordinal='70' />
+                <column datatype='real' name='Per Capita Emissions (t) 2014' ordinal='71' />
+              </columns>
+            </relation>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[TOTAL]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:BT54:no:A1:BT54:2&quot;</attribute>
+              <attribute datatype='integer' name='lost'>0</attribute>
+              <attribute datatype='integer' name='outcome'>1</attribute>
+              <attribute datatype='integer' name='processed'>3333</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NAME</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[NAME]</local-name>
+            <parent-name>[London_Borough_Excluding_MHW.shp]</parent-name>
+            <remote-alias>NAME</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>GSS_CODE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[GSS_CODE]</local-name>
+            <parent-name>[London_Borough_Excluding_MHW.shp]</parent-name>
+            <remote-alias>GSS_CODE</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HECTARES</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[HECTARES]</local-name>
+            <parent-name>[London_Borough_Excluding_MHW.shp]</parent-name>
+            <remote-alias>HECTARES</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NONLD_AREA</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[NONLD_AREA]</local-name>
+            <parent-name>[London_Borough_Excluding_MHW.shp]</parent-name>
+            <remote-alias>NONLD_AREA</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ONS_INNER</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ONS_INNER]</local-name>
+            <parent-name>[London_Borough_Excluding_MHW.shp]</parent-name>
+            <remote-alias>ONS_INNER</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SUB_2009</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[SUB_2009]</local-name>
+            <parent-name>[London_Borough_Excluding_MHW.shp]</parent-name>
+            <remote-alias>SUB_2009</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SUB_2006</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[SUB_2006]</local-name>
+            <parent-name>[London_Borough_Excluding_MHW.shp]</parent-name>
+            <remote-alias>SUB_2006</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Geometry</remote-name>
+            <remote-type>8</remote-type>
+            <local-name>[Geometry]</local-name>
+            <parent-name>[London_Borough_Excluding_MHW.shp]</parent-name>
+            <remote-alias>Geometry</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>spatial</local-type>
+            <aggregation>Collect</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Code</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Code]</local-name>
+            <parent-name>[TOTAL]</parent-name>
+            <remote-alias>Code</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Name]</local-name>
+            <parent-name>[TOTAL]</parent-name>
+            <remote-alias>Name</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Industry and Commercial 2005</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Industry and Commercial 2005]</local-name>
+            <parent-name>[TOTAL]</parent-name>
+            <remote-alias>Industry and Commercial 2005</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Industry and Commercial 2006</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Industry and Commercial 2006]</local-name>
+            <parent-name>[TOTAL]</parent-name>
+            <remote-alias>Industry and Commercial 2006</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Industry and Commercial 2007</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Industry and Commercial 2007]</local-name>
+            <parent-name>[TOTAL]</parent-name>
+            <remote-alias>Industry and Commercial 2007</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Industry and Commercial 2008</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Industry and Commercial 2008]</local-name>
+            <parent-name>[TOTAL]</parent-name>
+            <remote-alias>Industry and Commercial 2008</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Industry and Commercial 2009</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Industry and Commercial 2009]</local-name>
+            <parent-name>[TOTAL]</parent-name>
+            <remote-alias>Industry and Commercial 2009</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Industry and Commercial 2010</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Industry and Commercial 2010]</local-name>
+            <parent-name>[TOTAL]</parent-name>
+            <remote-alias>Industry and Commercial 2010</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Industry and Commercial 2011</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Industry and Commercial 2011]</local-name>
+            <parent-name>[TOTAL]</parent-name>
+            <remote-alias>Industry and Commercial 2011</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Industry and Commercial 2012</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Industry and Commercial 2012]</local-name>
+            <parent-name>[TOTAL]</parent-name>
+            <remote-alias>Industry and Commercial 2012</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Industry and Commercial 2013</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Industry and Commercial 2013]</local-name>
+            <parent-name>[TOTAL]</parent-name>
+            <remote-alias>Industry and Commercial 2013</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Industry and Commercial 2014</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Industry and Commercial 2014]</local-name>
+            <parent-name>[TOTAL]</parent-name>
+            <remote-alias>Industry and Commercial 2014</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Domestic 2005</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Domestic 2005]</local-name>
+            <parent-name>[TOTAL]</parent-name>
+            <remote-alias>Domestic 2005</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Domestic 2006</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Domestic 2006]</local-name>
+            <parent-name>[TOTAL]</parent-name>
+            <remote-alias>Domestic 2006</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Domestic 2007</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Domestic 2007]</local-name>
+            <parent-name>[TOTAL]</parent-name>
+            <remote-alias>Domestic 2007</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Domestic 2008</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Domestic 2008]</local-name>
+            <parent-name>[TOTAL]</parent-name>
+            <remote-alias>Domestic 2008</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Domestic 2009</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Domestic 2009]</local-name>
+            <parent-name>[TOTAL]</parent-name>
+            <remote-alias>Domestic 2009</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Domestic 2010</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Domestic 2010]</local-name>
+            <parent-name>[TOTAL]</parent-name>
+            <remote-alias>Domestic 2010</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Domestic 2011</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Domestic 2011]</local-name>
+            <parent-name>[TOTAL]</parent-name>
+            <remote-alias>Domestic 2011</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Domestic 2012</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Domestic 2012]</local-name>
+            <parent-name>[TOTAL]</parent-name>
+            <remote-alias>Domestic 2012</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Domestic 2013</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Domestic 2013]</local-name>
+            <parent-name>[TOTAL]</parent-name>
+            <remote-alias>Domestic 2013</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Domestic 2014</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Domestic 2014]</local-name>
+            <parent-name>[TOTAL]</parent-name>
+            <remote-alias>Domestic 2014</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Transport 2005</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Transport 2005]</local-name>
+            <parent-name>[TOTAL]</parent-name>
+            <remote-alias>Transport 2005</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Transport 2006</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Transport 2006]</local-name>
+            <parent-name>[TOTAL]</parent-name>
+            <remote-alias>Transport 2006</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Transport 2007</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Transport 2007]</local-name>
+            <parent-name>[TOTAL]</parent-name>
+            <remote-alias>Transport 2007</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Transport 2008</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Transport 2008]</local-name>
+            <parent-name>[TOTAL]</parent-name>
+            <remote-alias>Transport 2008</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Transport 2009</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Transport 2009]</local-name>
+            <parent-name>[TOTAL]</parent-name>
+            <remote-alias>Transport 2009</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Transport 2010</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Transport 2010]</local-name>
+            <parent-name>[TOTAL]</parent-name>
+            <remote-alias>Transport 2010</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Transport 2011</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Transport 2011]</local-name>
+            <parent-name>[TOTAL]</parent-name>
+            <remote-alias>Transport 2011</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Transport 2012</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Transport 2012]</local-name>
+            <parent-name>[TOTAL]</parent-name>
+            <remote-alias>Transport 2012</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Names</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Pivot Field Names]</local-name>
+            <parent-name>[Pivot]</parent-name>
+            <remote-alias>Pivot Field Names</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pivot Field Values</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Pivot Field Values]</local-name>
+            <parent-name>[Pivot]</parent-name>
+            <remote-alias>Pivot Field Values</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Gss Code' datatype='string' name='[GSS_CODE]' role='dimension' type='nominal' />
+      <column caption='Hectares' datatype='real' name='[HECTARES]' role='measure' type='quantitative' />
+      <column caption='Name' datatype='string' name='[NAME]' role='dimension' type='nominal' />
+      <column caption='Nonld Area' datatype='real' name='[NONLD_AREA]' role='measure' type='quantitative' />
+      <column caption='Name1' datatype='string' name='[Name]' role='dimension' type='nominal' />
+      <column caption='Ons Inner' datatype='string' name='[ONS_INNER]' role='dimension' type='nominal' />
+      <column caption='Sub 2006' datatype='string' name='[SUB_2006]' role='dimension' type='nominal' />
+      <column caption='Sub 2009' datatype='string' name='[SUB_2009]' role='dimension' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='London_Borough_Excluding_MHW.shp' datatype='table' name='[__tableau_internal_object_id__].[London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' rowDisplayCount='33' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;USA&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='London_Borough_Excluding_MHW.shp' id='London_Borough_Excluding_MHW.shp_120A9A872F1647C18EA9ECB3C853CAF2'>
+            <properties context=''>
+              <relation join='inner' type='join'>
+                <clause type='join'>
+                  <expression op='='>
+                    <expression op='[London_Borough_Excluding_MHW.shp].[GSS_CODE]' />
+                    <expression op='[TOTAL].[Code]' />
+                  </expression>
+                </clause>
+                <relation connection='ogrdirect.19e81141lp5pos1a2dbtb1u229qz' name='London_Borough_Excluding_MHW.shp' table='[London_Borough_Excluding_MHW.shp]' type='table'>
+                  <columns>
+                    <column datatype='string' name='NAME' ordinal='0' />
+                    <column datatype='string' name='GSS_CODE' ordinal='1' />
+                    <column datatype='real' name='HECTARES' ordinal='2' />
+                    <column datatype='real' name='NONLD_AREA' ordinal='3' />
+                    <column datatype='string' name='ONS_INNER' ordinal='4' />
+                    <column datatype='string' name='SUB_2009' ordinal='5' />
+                    <column datatype='string' name='SUB_2006' ordinal='6' />
+                    <column datatype='spatial' name='Geometry' ordinal='7' />
+                  </columns>
+                </relation>
+                <relation name='Pivot' type='pivot'>
+                  <columns>
+                    <column datatype='string' name='Pivot Field Names' />
+                    <column datatype='real' name='Pivot Field Values' />
+                  </columns>
+                  <tag name='Pivot Field Names'>
+                    <value name='[Grand Total 2005]' />
+                    <value name='[Grand Total 2006]' />
+                    <value name='[Grand Total 2007]' />
+                    <value name='[Grand Total 2008]' />
+                    <value name='[Grand Total 2009]' />
+                    <value name='[Grand Total 2010]' />
+                    <value name='[Grand Total 2011]' />
+                    <value name='[Grand Total 2012]' />
+                    <value name='[Grand Total 2013]' />
+                    <value name='[Grand Total 2014]' />
+                    <value name='[N. LULUCF Net Emissions 2005]' />
+                    <value name='[N. LULUCF Net Emissions 2006]' />
+                    <value name='[N. LULUCF Net Emissions 2007]' />
+                    <value name='[N. LULUCF Net Emissions 2008]' />
+                    <value name='[N. LULUCF Net Emissions 2009]' />
+                    <value name='[N. LULUCF Net Emissions 2010]' />
+                    <value name='[N. LULUCF Net Emissions 2011]' />
+                    <value name='[N. LULUCF Net Emissions 2012]' />
+                    <value name='[N. LULUCF Net Emissions 2013]' />
+                    <value name='[N. LULUCF Net Emissions 2014]' />
+                    <value name='[Per Capita Emissions (t) 2005]' />
+                    <value name='[Per Capita Emissions (t) 2006]' />
+                    <value name='[Per Capita Emissions (t) 2007]' />
+                    <value name='[Per Capita Emissions (t) 2008]' />
+                    <value name='[Per Capita Emissions (t) 2009]' />
+                    <value name='[Per Capita Emissions (t) 2010]' />
+                    <value name='[Per Capita Emissions (t) 2011]' />
+                    <value name='[Per Capita Emissions (t) 2012]' />
+                    <value name='[Per Capita Emissions (t) 2013]' />
+                    <value name='[Per Capita Emissions (t) 2014]' />
+                    <value name='[Population (&apos;000s, mid-year estimate) 2005]' />
+                    <value name='[Population (&apos;000s, mid-year estimate) 2006]' />
+                    <value name='[Population (&apos;000s, mid-year estimate) 2007]' />
+                    <value name='[Population (&apos;000s, mid-year estimate) 2008]' />
+                    <value name='[Population (&apos;000s, mid-year estimate) 2009]' />
+                    <value name='[Population (&apos;000s, mid-year estimate) 2010]' />
+                    <value name='[Population (&apos;000s, mid-year estimate) 2011]' />
+                    <value name='[Population (&apos;000s, mid-year estimate) 2012]' />
+                    <value name='[Population (&apos;000s, mid-year estimate) 2013]' />
+                    <value name='[Population (&apos;000s, mid-year estimate) 2014]' />
+                    <value name='[Transport 2013]' />
+                    <value name='[Transport 2014]' />
+                  </tag>
+                  <groups>
+                    <group name='Pivot Field Values'>
+                      <field name='[TOTAL].[Grand Total 2005]' />
+                      <field name='[TOTAL].[Grand Total 2006]' />
+                      <field name='[TOTAL].[Grand Total 2007]' />
+                      <field name='[TOTAL].[Grand Total 2008]' />
+                      <field name='[TOTAL].[Grand Total 2009]' />
+                      <field name='[TOTAL].[Grand Total 2010]' />
+                      <field name='[TOTAL].[Grand Total 2011]' />
+                      <field name='[TOTAL].[Grand Total 2012]' />
+                      <field name='[TOTAL].[Grand Total 2013]' />
+                      <field name='[TOTAL].[Grand Total 2014]' />
+                      <field name='[TOTAL].[N. LULUCF Net Emissions 2005]' />
+                      <field name='[TOTAL].[N. LULUCF Net Emissions 2006]' />
+                      <field name='[TOTAL].[N. LULUCF Net Emissions 2007]' />
+                      <field name='[TOTAL].[N. LULUCF Net Emissions 2008]' />
+                      <field name='[TOTAL].[N. LULUCF Net Emissions 2009]' />
+                      <field name='[TOTAL].[N. LULUCF Net Emissions 2010]' />
+                      <field name='[TOTAL].[N. LULUCF Net Emissions 2011]' />
+                      <field name='[TOTAL].[N. LULUCF Net Emissions 2012]' />
+                      <field name='[TOTAL].[N. LULUCF Net Emissions 2013]' />
+                      <field name='[TOTAL].[N. LULUCF Net Emissions 2014]' />
+                      <field name='[TOTAL].[Per Capita Emissions (t) 2005]' />
+                      <field name='[TOTAL].[Per Capita Emissions (t) 2006]' />
+                      <field name='[TOTAL].[Per Capita Emissions (t) 2007]' />
+                      <field name='[TOTAL].[Per Capita Emissions (t) 2008]' />
+                      <field name='[TOTAL].[Per Capita Emissions (t) 2009]' />
+                      <field name='[TOTAL].[Per Capita Emissions (t) 2010]' />
+                      <field name='[TOTAL].[Per Capita Emissions (t) 2011]' />
+                      <field name='[TOTAL].[Per Capita Emissions (t) 2012]' />
+                      <field name='[TOTAL].[Per Capita Emissions (t) 2013]' />
+                      <field name='[TOTAL].[Per Capita Emissions (t) 2014]' />
+                      <field name='[TOTAL].[Population (&apos;000s, mid-year estimate) 2005]' />
+                      <field name='[TOTAL].[Population (&apos;000s, mid-year estimate) 2006]' />
+                      <field name='[TOTAL].[Population (&apos;000s, mid-year estimate) 2007]' />
+                      <field name='[TOTAL].[Population (&apos;000s, mid-year estimate) 2008]' />
+                      <field name='[TOTAL].[Population (&apos;000s, mid-year estimate) 2009]' />
+                      <field name='[TOTAL].[Population (&apos;000s, mid-year estimate) 2010]' />
+                      <field name='[TOTAL].[Population (&apos;000s, mid-year estimate) 2011]' />
+                      <field name='[TOTAL].[Population (&apos;000s, mid-year estimate) 2012]' />
+                      <field name='[TOTAL].[Population (&apos;000s, mid-year estimate) 2013]' />
+                      <field name='[TOTAL].[Population (&apos;000s, mid-year estimate) 2014]' />
+                      <field name='[TOTAL].[Transport 2013]' />
+                      <field name='[TOTAL].[Transport 2014]' />
+                    </group>
+                  </groups>
+                  <relation connection='excel-direct.0xxx1fa1kfz3vj1fnqx0j10a06so' name='TOTAL' table='[TOTAL$]' type='table'>
+                    <columns gridOrigin='A1:BT54:no:A1:BT54:2' lost='0' outcome='1' processed='3333'>
+                      <column datatype='string' name='Code' ordinal='0' />
+                      <column datatype='string' name='Name' ordinal='1' />
+                      <column datatype='real' name='Industry and Commercial 2005' ordinal='2' />
+                      <column datatype='real' name='Industry and Commercial 2006' ordinal='3' />
+                      <column datatype='real' name='Industry and Commercial 2007' ordinal='4' />
+                      <column datatype='real' name='Industry and Commercial 2008' ordinal='5' />
+                      <column datatype='real' name='Industry and Commercial 2009' ordinal='6' />
+                      <column datatype='real' name='Industry and Commercial 2010' ordinal='7' />
+                      <column datatype='real' name='Industry and Commercial 2011' ordinal='8' />
+                      <column datatype='real' name='Industry and Commercial 2012' ordinal='9' />
+                      <column datatype='real' name='Industry and Commercial 2013' ordinal='10' />
+                      <column datatype='real' name='Industry and Commercial 2014' ordinal='11' />
+                      <column datatype='real' name='Domestic 2005' ordinal='12' />
+                      <column datatype='real' name='Domestic 2006' ordinal='13' />
+                      <column datatype='real' name='Domestic 2007' ordinal='14' />
+                      <column datatype='real' name='Domestic 2008' ordinal='15' />
+                      <column datatype='real' name='Domestic 2009' ordinal='16' />
+                      <column datatype='real' name='Domestic 2010' ordinal='17' />
+                      <column datatype='real' name='Domestic 2011' ordinal='18' />
+                      <column datatype='real' name='Domestic 2012' ordinal='19' />
+                      <column datatype='real' name='Domestic 2013' ordinal='20' />
+                      <column datatype='real' name='Domestic 2014' ordinal='21' />
+                      <column datatype='real' name='Transport 2005' ordinal='22' />
+                      <column datatype='real' name='Transport 2006' ordinal='23' />
+                      <column datatype='real' name='Transport 2007' ordinal='24' />
+                      <column datatype='real' name='Transport 2008' ordinal='25' />
+                      <column datatype='real' name='Transport 2009' ordinal='26' />
+                      <column datatype='real' name='Transport 2010' ordinal='27' />
+                      <column datatype='real' name='Transport 2011' ordinal='28' />
+                      <column datatype='real' name='Transport 2012' ordinal='29' />
+                      <column datatype='real' name='Transport 2013' ordinal='30' />
+                      <column datatype='real' name='Transport 2014' ordinal='31' />
+                      <column datatype='real' name='N. LULUCF Net Emissions 2005' ordinal='32' />
+                      <column datatype='real' name='N. LULUCF Net Emissions 2006' ordinal='33' />
+                      <column datatype='real' name='N. LULUCF Net Emissions 2007' ordinal='34' />
+                      <column datatype='real' name='N. LULUCF Net Emissions 2008' ordinal='35' />
+                      <column datatype='real' name='N. LULUCF Net Emissions 2009' ordinal='36' />
+                      <column datatype='real' name='N. LULUCF Net Emissions 2010' ordinal='37' />
+                      <column datatype='real' name='N. LULUCF Net Emissions 2011' ordinal='38' />
+                      <column datatype='real' name='N. LULUCF Net Emissions 2012' ordinal='39' />
+                      <column datatype='real' name='N. LULUCF Net Emissions 2013' ordinal='40' />
+                      <column datatype='real' name='N. LULUCF Net Emissions 2014' ordinal='41' />
+                      <column datatype='real' name='Grand Total 2005' ordinal='42' />
+                      <column datatype='real' name='Grand Total 2006' ordinal='43' />
+                      <column datatype='real' name='Grand Total 2007' ordinal='44' />
+                      <column datatype='real' name='Grand Total 2008' ordinal='45' />
+                      <column datatype='real' name='Grand Total 2009' ordinal='46' />
+                      <column datatype='real' name='Grand Total 2010' ordinal='47' />
+                      <column datatype='real' name='Grand Total 2011' ordinal='48' />
+                      <column datatype='real' name='Grand Total 2012' ordinal='49' />
+                      <column datatype='real' name='Grand Total 2013' ordinal='50' />
+                      <column datatype='real' name='Grand Total 2014' ordinal='51' />
+                      <column datatype='real' name='Population (&apos;000s, mid-year estimate) 2005' ordinal='52' />
+                      <column datatype='real' name='Population (&apos;000s, mid-year estimate) 2006' ordinal='53' />
+                      <column datatype='real' name='Population (&apos;000s, mid-year estimate) 2007' ordinal='54' />
+                      <column datatype='real' name='Population (&apos;000s, mid-year estimate) 2008' ordinal='55' />
+                      <column datatype='real' name='Population (&apos;000s, mid-year estimate) 2009' ordinal='56' />
+                      <column datatype='real' name='Population (&apos;000s, mid-year estimate) 2010' ordinal='57' />
+                      <column datatype='real' name='Population (&apos;000s, mid-year estimate) 2011' ordinal='58' />
+                      <column datatype='real' name='Population (&apos;000s, mid-year estimate) 2012' ordinal='59' />
+                      <column datatype='real' name='Population (&apos;000s, mid-year estimate) 2013' ordinal='60' />
+                      <column datatype='real' name='Population (&apos;000s, mid-year estimate) 2014' ordinal='61' />
+                      <column datatype='real' name='Per Capita Emissions (t) 2005' ordinal='62' />
+                      <column datatype='real' name='Per Capita Emissions (t) 2006' ordinal='63' />
+                      <column datatype='real' name='Per Capita Emissions (t) 2007' ordinal='64' />
+                      <column datatype='real' name='Per Capita Emissions (t) 2008' ordinal='65' />
+                      <column datatype='real' name='Per Capita Emissions (t) 2009' ordinal='66' />
+                      <column datatype='real' name='Per Capita Emissions (t) 2010' ordinal='67' />
+                      <column datatype='real' name='Per Capita Emissions (t) 2011' ordinal='68' />
+                      <column datatype='real' name='Per Capita Emissions (t) 2012' ordinal='69' />
+                      <column datatype='real' name='Per Capita Emissions (t) 2013' ordinal='70' />
+                      <column datatype='real' name='Per Capita Emissions (t) 2014' ordinal='71' />
+                    </columns>
+                  </relation>
+                </relation>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='London_Borough_Excluding_MHW' name='federated.11jqx2d0hk6sft18us2ok1tft3fm' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.11jqx2d0hk6sft18us2ok1tft3fm'>
+            <column datatype='spatial' name='[Geometry]' role='measure' type='nominal' />
+            <column caption='Hectares' datatype='real' name='[HECTARES]' role='measure' type='quantitative' />
+            <column caption='Name' datatype='string' name='[NAME]' role='dimension' type='nominal' />
+            <column-instance column='[Geometry]' derivation='Collect' name='[clct:Geometry:nk]' pivot='key' type='nominal' />
+            <column-instance column='[NAME]' derivation='None' name='[none:NAME:nk]' pivot='key' type='nominal' />
+            <column-instance column='[HECTARES]' derivation='Sum' name='[sum:HECTARES:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.11jqx2d0hk6sft18us2ok1tft3fm].[sum:HECTARES:qk]' />
+              <lod column='[federated.11jqx2d0hk6sft18us2ok1tft3fm].[clct:Geometry:nk]' />
+              <lod column='[federated.11jqx2d0hk6sft18us2ok1tft3fm].[none:NAME:nk]' />
+              <tooltip column='[federated.11jqx2d0hk6sft18us2ok1tft3fm].[sum:HECTARES:qk]' />
+              <geometry column='[federated.11jqx2d0hk6sft18us2ok1tft3fm].[clct:Geometry:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.11jqx2d0hk6sft18us2ok1tft3fm].[Latitude (generated)]</rows>
+        <cols>[federated.11jqx2d0hk6sft18us2ok1tft3fm].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{1F8E335D-BBA1-4B68-9C30-58B14A212E20}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.11jqx2d0hk6sft18us2ok1tft3fm].[sum:HECTARES:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.11jqx2d0hk6sft18us2ok1tft3fm].[clct:Geometry:nk]</field>
+            <field>[federated.11jqx2d0hk6sft18us2ok1tft3fm].[none:NAME:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{7A4F415C-0B98-41BC-ACB4-8240A03F9EA6}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
